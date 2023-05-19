@@ -1,0 +1,22 @@
+  <div class="msg">{{msg}}</div> 
+  <div class="msg err">{{err}}</div> 
+  <div class="container">
+    <div class="login-head">
+      <h1>Validation</h1>
+    </div>
+    <div class="login-body">
+      <form action="">
+        <div class="login-input">
+        <label for="email">Email:</label>
+        <input id="user" type="email" name="email" [(ngModel)]="e" required #email placeholder="Enter email..">
+      </div>
+      <div class="login-input">
+        <label for="phone">Phone:</label>
+        <input id="pass" type="number" name="phone" [(ngModel)]="p" required #phone placeholder="Enter phone no..">
+      </div>
+      <div class="login-button">
+        <button type="submit" (click)="validateForm(phone.value,email.value)">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
